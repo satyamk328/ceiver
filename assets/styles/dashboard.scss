@@ -1,0 +1,157 @@
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+// ── Sidebar ──────────────────────────────────────────
+.sidebar {
+  width: 256px;
+  min-width: 256px;
+  background-color: $sidebar-bg;
+  color: $sidebar-text;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 0.75rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  overflow-y: auto;
+  transition: width 0.25s;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    padding: 0 0.75rem 1.5rem;
+    border-bottom: 1px solid rgba($sidebar-text, 0.1);
+    margin-bottom: 1rem;
+
+    .logo-icon {
+      width: 32px;
+      height: 32px;
+      background-color: $sidebar-active-bg;
+      border-radius: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.875rem;
+      color: $btn-primary-text;
+      flex-shrink: 0;
+    }
+
+    .logo-text {
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: $sidebar-text;
+    }
+  }
+
+  &__section-label {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: rgba($sidebar-text, 0.4);
+    padding: 0.5rem 0.75rem 0.25rem;
+    margin-top: 0.5rem;
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+    flex: 1;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.625rem 0.75rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: rgba($sidebar-text, 0.75);
+    cursor: pointer;
+    transition: background-color 0.15s, color 0.15s;
+
+    &:hover {
+      background-color: rgba($sidebar-text, 0.08);
+      color: $sidebar-text;
+    }
+
+    &--active {
+      background-color: $sidebar-active-bg;
+      color: $btn-primary-text;
+      font-weight: 600;
+
+      &:hover {
+        background-color: $btn-primary-hover-bg;
+        color: $btn-primary-text;
+      }
+    }
+
+    .nav-icon {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      opacity: 0.8;
+    }
+  }
+
+  &__footer {
+    padding-top: 1rem;
+    border-top: 1px solid rgba($sidebar-text, 0.1);
+    margin-top: auto;
+  }
+}
+
+// ── Main content area ────────────────────────────────
+.dashboard-content {
+  flex: 1;
+  margin-left: 256px;
+  min-height: 100vh;
+  background-color: $bg-page;
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar {
+  height: 64px;
+  background-color: #ffffff;
+  border-bottom: 1px solid $border-color;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 40;
+
+  &__title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: $text-primary;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+}
+
+.dashboard-body {
+  padding: 1.5rem;
+  flex: 1;
+}
+
+// ── Stats grid ───────────────────────────────────────
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 1.75rem;
+}

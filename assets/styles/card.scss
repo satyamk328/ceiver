@@ -1,0 +1,89 @@
+.card {
+  background-color: #ffffff;
+  border: 1px solid $border-soft;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  transition: box-shadow 0.2s, border-color 0.2s;
+
+  &:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+    border-color: $border-color;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid $border-soft;
+
+    h3,
+    .card-title {
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: $text-primary;
+    }
+  }
+
+  &__body {
+    padding: 1.5rem;
+  }
+
+  &__footer {
+    padding: 1rem 1.5rem;
+    background-color: $bg-table-header;
+    border-top: 1px solid $border-soft;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.75rem;
+  }
+}
+
+// Stat / metric card
+.stat-card {
+  background-color: #ffffff;
+  border: 1px solid $border-soft;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  transition: box-shadow 0.2s;
+
+  &:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+  }
+
+  &__label {
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: $app-footer-text;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  &__value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: $text-primary;
+    line-height: 1.1;
+  }
+
+  &__delta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    margin-top: 0.25rem;
+
+    &--up {
+      color: $success-color;
+    }
+
+    &--down {
+      color: $error-color;
+    }
+  }
+}

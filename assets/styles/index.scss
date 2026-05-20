@@ -1,0 +1,33 @@
+// ── Entry point for all application styles ─────────────────────────
+// Tailwind CSS is imported via assets/styles/tailwind.css
+// (imported separately in layout.js — Sass cannot resolve the
+//  bare "tailwindcss" specifier, so it lives in a plain CSS file)
+
+// 1. Design tokens (CSS custom properties)
+@import "./tokens.scss";
+
+// 2. SCSS variables used by component partials
+@import "./config.scss";
+
+// 3. Base reset + body
+@import "./main.scss";
+
+// 4. Animations
+@import "./animations.scss";
+
+// 5. Shared UI utilities (buttons, cards, labels, patterns)
+@import "./utilities.scss";
+
+// 6. UI component styles
+@import "./loader.scss";
+@import "./input.scss";
+@import "./table.scss";
+@import "./slider.scss";
+@import "./carousel.scss";
+
+// 7. Page / section styles
+@import "./login.scss";
+@import "./dashboard.scss";
+@import "./card.scss";
+@import "./sms.scss";
+@import "./errorLogs.scss";

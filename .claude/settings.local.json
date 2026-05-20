@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx tsc *)",
+      "Bash(npm run *)",
+      "Bash(npm install *)",
+      "Bash(mv \"app/layout.jsx\" \"app/layout.js\")",
+      "Bash(mv \"components/providers/ReduxProvider.jsx\" \"components/providers/ReduxProvider.js\")",
+      "Bash(mv \"components/common/Header.jsx\" \"components/common/Header.js\")",
+      "Bash(mv \"components/common/Footer.jsx\" \"components/common/Footer.js\")",
+      "Bash(mv \"app/\\(routes\\)/page.jsx\" \"app/\\(routes\\)/page.js\")"
+    ]
+  }
+}

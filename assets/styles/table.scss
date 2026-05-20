@@ -1,0 +1,110 @@
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid $border-color;
+  border-radius: 0.75rem;
+  background-color: #ffffff;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+
+  thead {
+    background-color: $bg-table-header;
+
+    th {
+      padding: 0.75rem 1rem;
+      text-align: left;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: $border-strong;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-bottom: 1px solid $border-color;
+      white-space: nowrap;
+    }
+  }
+
+  tbody {
+    tr {
+      border-bottom: 1px solid $border-soft;
+      transition: background-color 0.15s;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &:hover {
+        background-color: $bg-table-header;
+      }
+    }
+
+    td {
+      padding: 0.875rem 1rem;
+      color: $text-primary;
+      vertical-align: middle;
+    }
+  }
+}
+
+.table-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+
+  &__search {
+    flex: 1;
+    min-width: 200px;
+    max-width: 320px;
+  }
+
+  &__controls {
+    display: flex;
+    gap: 0.75rem;
+  }
+}
+
+.table-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.875rem 1rem;
+  border-top: 1px solid $border-soft;
+  font-size: 0.875rem;
+  color: $border-strong;
+
+  &__pages {
+    display: flex;
+    gap: 0.375rem;
+  }
+
+  &__btn {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.375rem;
+    border: 1px solid $border-color;
+    background-color: #ffffff;
+    font-size: 0.875rem;
+    color: $text-primary;
+    cursor: pointer;
+    transition: background-color 0.15s;
+
+    &:hover {
+      background-color: $bg-table-header;
+    }
+
+    &--active {
+      background-color: $btn-primary-bg;
+      border-color: $btn-primary-bg;
+      color: $btn-primary-text;
+    }
+  }
+}

@@ -1,0 +1,118 @@
+.sms-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+// Compose panel
+.sms-compose {
+  background-color: #ffffff;
+  border: 1px solid $border-color;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+
+  &__header {
+    font-size: 1rem;
+    font-weight: 600;
+    color: $text-primary;
+    margin-bottom: 1.25rem;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &__char-count {
+    text-align: right;
+    font-size: 0.75rem;
+    color: $border-strong;
+    margin-top: -0.5rem;
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  &__recipient-count {
+    font-size: 0.875rem;
+    color: $border-strong;
+  }
+
+  &__actions {
+    display: flex;
+    gap: 0.75rem;
+  }
+}
+
+// SMS history list
+.sms-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.sms-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background-color: #ffffff;
+  border: 1px solid $border-soft;
+  border-left-width: 3px;
+  border-radius: 0.75rem;
+  transition: box-shadow 0.15s;
+
+  &:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  }
+
+  &--sent {
+    border-left-color: $success-color;
+  }
+
+  &--failed {
+    border-left-color: $error-color;
+  }
+
+  &--pending {
+    border-left-color: $border-strong;
+  }
+
+  &__body {
+    flex: 1;
+  }
+
+  &__recipient {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: $text-primary;
+    margin-bottom: 0.25rem;
+  }
+
+  &__content {
+    font-size: 0.875rem;
+    color: $app-footer-text;
+    line-height: 1.5;
+  }
+
+  &__meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.375rem;
+    flex-shrink: 0;
+  }
+
+  &__time {
+    font-size: 0.75rem;
+    color: $border-strong;
+    white-space: nowrap;
+  }
+}
